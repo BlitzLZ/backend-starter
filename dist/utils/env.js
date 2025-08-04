@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isTest = exports.isStaging = exports.isProd = exports.isDev = void 0;
+const isDev = () => process.env.NODE_ENV?.toLowerCase() === 'development';
+exports.isDev = isDev;
+const isProd = () => process.env.NODE_ENV?.toLowerCase() === 'production';
+exports.isProd = isProd;
+const isStaging = () => process.env.NODE_ENV?.toLowerCase() === 'staging';
+exports.isStaging = isStaging;
+const isTest = () => process.env.NODE_ENV?.toLowerCase() === 'test';
+exports.isTest = isTest;
